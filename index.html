@@ -42,12 +42,54 @@ body{background:#f6f4ee;color:#181918}
 .atlas{background:#f3f0e9}.atlas-board{background:#e3dfd5}.atlas-side{background:#242722}.atlas-tab[aria-pressed=true]{background:#ddc8a9;border-color:#ddc8a9}
 .atlas-map .point{stroke:#d7bd9b}.atlas-map .link{stroke:#8e795d}
 :target{scroll-margin-top:100px}
+
+/* ELEPHANT-INSPIRED FULL-BLEED REBUILD */
+:root{--cream:#f8f4ed;--ink:#171717;--lime:#ffcf3c;--rust:#ed5839;--forest:#1c1b19}
+body{background:#f8f4ed;color:#171717}
+.nav,.nav.scrolled{background:#f8f4ed!important;color:#171717!important;border:0!important;backdrop-filter:none!important;padding:22px 4vw!important}
+.brand{font-weight:800;font-size:22px;letter-spacing:-.06em}.brand span{color:#ed5839!important}
+.navlinks{gap:20px}.navlinks a{font-size:11px}.navlinks a:hover{color:#ed5839}
+.hero{min-height:100svh;background:#e86a42!important;color:#fff;padding:150px 5vw 7vw;justify-content:center}
+.hero:before{background:linear-gradient(90deg,#1b14125e,transparent 65%)!important}
+.hero-landscape{filter:saturate(1.3) sepia(.3)}.hero-landscape svg{opacity:.7}
+.hero h1{font-size:clamp(75px,13.2vw,225px)!important;letter-spacing:-.09em;line-height:.82!important;max-width:1500px;text-shadow:none!important}
+.hero h1 em{color:#ffcf3c!important}
+.hero .eyebrow{font-size:13px;letter-spacing:.18em}
+.hero-rail{color:#fff}.hero-scroll{color:#fff}
+.story{background:#ee583c;color:#fff}.story-label,.story-end{color:#ffda62}.story-svg .trace{stroke:#ffcf3c}.story-svg .dot{fill:#ffcf3c}.story-step.active{background:#ffcf3c}
+.marquee{background:#ffcf3c;color:#171717;border:0}
+.chapter-break{background:#ffcf3c;color:#171717;padding-block:130px}
+.chapter-break h2{font-size:clamp(70px,11vw,180px)}
+.atlas{background:#f8f4ed;color:#171717}.atlas-top h2{font-size:clamp(60px,8vw,132px)}
+.atlas-board{background:#f2d8bc}.atlas-side{background:#ee583c;color:#fff}.atlas-side .index,.atlas-side .data b{color:#ffdb6c}.atlas-tab[aria-pressed=true]{background:#ffcf3c;border-color:#ffcf3c;color:#171717}
+.atlas-map .point{fill:#ed5839;stroke:#ffcf3c}.atlas-map .link{stroke:#ed5839}
+section:not(.hero):not(.story):not(.atlas):not(.chapter-break){scroll-margin-top:85px}
+.reveal{opacity:1!important;transform:none!important}
+.ele-banner{min-height:90svh;background:#ed5839;color:white;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;padding:9vw 5vw 5vw;position:relative;isolation:isolate}
+.ele-banner:before{content:"";position:absolute;inset:-20%;background:repeating-radial-gradient(ellipse at 68% 55%,transparent 0 55px,#ffcf3c50 57px 60px);transform:rotate(-15deg);z-index:-1;animation:elemove 18s ease-in-out infinite alternate}
+.ele-banner h2{font:800 clamp(80px,13vw,210px)/.83 Manrope,sans-serif;letter-spacing:-.105em;margin:0;max-width:1500px}
+.ele-banner p{font-size:clamp(18px,2vw,30px);max-width:650px;line-height:1.3}
+.ele-banner a{align-self:flex-start;background:#ffcf3c;color:#171717;border-radius:50px;padding:17px 27px;font-weight:800}
+@keyframes elemove{to{transform:rotate(7deg) scale(1.2)}}
+.ele-big-number{background:#191919;color:#fff;padding:110px 5vw;display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.ele-big-number h2{font:800 clamp(60px,9vw,140px)/.9 Manrope,sans-serif;letter-spacing:-.09em;margin:0}
+.ele-big-number p{font-size:clamp(18px,2vw,28px);line-height:1.4;max-width:600px}
+.ele-panels{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.ele-panel{min-height:570px;padding:35px;display:flex;flex-direction:column;justify-content:space-between;background:#ffcf3c;color:#191919;transition:background .4s}
+.ele-panel:nth-child(2){background:#f8f4ed}.ele-panel:nth-child(3){background:#ed5839;color:white}
+.ele-panel:hover{background:#d4a5fa}
+.ele-panel .num{font-size:12px;font-weight:800;letter-spacing:.15em}
+.ele-panel h3{font:800 clamp(42px,4.4vw,80px)/.95 Manrope,sans-serif;letter-spacing:-.075em;margin:0}
+.ele-panel p{font-size:17px;line-height:1.5;max-width:380px}
+.ele-panel a{font-weight:800;text-decoration:underline;text-underline-offset:7px}
+@media(max-width:850px){.ele-big-number{grid-template-columns:1fr}.ele-panels{grid-template-columns:1fr}.ele-panel{min-height:370px}.navlinks{gap:9px;overflow-x:auto;max-width:65vw}.navlinks a{white-space:nowrap}.hero h1{font-size:clamp(60px,14vw,125px)!important}}
+@media(prefers-reduced-motion:reduce){.ele-banner:before{animation:none}}
 </style></head><body>
 <nav class="nav"><a href="#inicio" class="brand">FP<span> / </span>KENNEDY</a><div class="navlinks"><a href="#recorrido">Recorrido</a><a href="#territorio">Territorio</a><a href="#atlas-espacial">Atlas espacial</a><a href="#sistema">Sistema</a><a href="#arquitectura">Arquitecturas</a><a href="#laboratorio">Simulador</a><a href="./presentacion.html">Corte III ↗</a></div></nav>
 <header class="hero" id="inicio"><div class="eyebrow">Atlas de investigación territorial / Bogotá · Kennedy / Corte III</div><h1>Federación<br><em>Policéntrica.</em></h1><div class="herobottom"><p>Una investigación sobre cómo reorganizar las relaciones entre abastecimiento, movilidad, agua, espacio público y vida cotidiana.</p><a class="round" href="#territorio" aria-label="Explorar">↓</a></div></header>
 
 <div class="scroll-meter" id="scrollMeter" aria-hidden="true"></div>
-<section class="story" id="recorrido" aria-label="Secuencia territorial interactiva">
+<section class="ele-banner" id="destino"><div class="index">FEDERACIÓN POLICÉNTRICA / BOGOTÁ</div><h2>Kennedy<br>en movimiento.</h2><div><p>Una nueva lectura del territorio: abastecimiento, movilidad, agua y espacio público como relaciones que pueden transformarse.</p><a href="#recorrido">Descubrir el proyecto ↗</a></div></section><section class="ele-big-number"><h2>Un territorio.<br>Muchas<br>conexiones.</h2><div><div class="index" style="color:#ffcf3c">LA HIPÓTESIS</div><p>La concentración de dinámicas comerciales y logísticas se relaciona con la fragmentación territorial. La propuesta explora una federación de espacios y actividades capaces de redistribuir relaciones sin separar los sistemas ecológicos de los sociales.</p><p style="font-size:13px;opacity:.7">Propuesta académica. La efectividad de los escenarios requiere modelación y validación.</p></div></section><section class="ele-panels" aria-label="Explorar capítulos"><article class="ele-panel"><div class="num">01 / TERRITORIO</div><h3>Entender<br>la presión.</h3><p>Corabastos, movilidad, humedales y espacio público.</p><a href="#territorio">Explorar diagnóstico ↗</a></article><article class="ele-panel"><div class="num">02 / ESPACIO</div><h3>Conectar<br>las piezas.</h3><p>Una lectura arquitectónica de los accesos, las adyacencias y las relaciones funcionales.</p><a href="#atlas-espacial">Explorar el atlas ↗</a></article><article class="ele-panel"><div class="num">03 / ESCENARIOS</div><h3>Probar<br>el cambio.</h3><p>Variables exploratorias para discutir hipótesis, no predicciones calibradas.</p><a href="#laboratorio">Abrir laboratorio ↗</a></article></section><section class="story" id="recorrido" aria-label="Secuencia territorial interactiva">
 <div class="story-sticky">
 <div class="sticky-label">LECTURA SISTÉMICA / 04 SECUENCIAS</div>
 <div class="story-art"><svg class="story-svg" viewBox="0 0 620 620" role="img" aria-label="Red territorial animada de cinco nodos"><circle class="ring" cx="310" cy="310" r="230"/><circle class="ring" cx="310" cy="310" r="160"/><circle class="ring" cx="310" cy="310" r="90"/><path class="trace" d="M135 180L400 110L510 300L375 510L130 415Z M135 180L375 510 M400 110L130 415 M510 300L135 180"/><g id="storyNodes"><circle class="dot" cx="135" cy="180" r="22"/><circle class="dot" cx="400" cy="110" r="22"/><circle class="dot" cx="510" cy="300" r="22"/><circle class="dot" cx="375" cy="510" r="22"/><circle class="dot" cx="130" cy="415" r="22"/></g><g class="node-label"><text x="70" y="147">ABASTECIMIENTO</text><text x="410" y="80">MOVILIDAD</text><text x="530" y="298">AGUA</text><text x="390" y="546">CIRCULARIDAD</text><text x="35" y="465">APRENDIZAJE</text></g></svg></div>
